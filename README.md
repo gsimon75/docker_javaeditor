@@ -24,7 +24,7 @@ If you do this frequently, it's worth to add an alias for it in your `~/.bashrc`
 
 * [OpenJDK](https://www.openlogic.com/openjdk-downloads)
 * [JavaEditor](http://javaeditor.org/doku.php?id=en:download) installer
-* Optional: [ProggyTiny and ProggyClean](http://www.proggyfonts.net) fonts
+* Optional: [ProggyTiny and ProggyClean](http://www.proggyfonts.net) fonts,
     NOTE: For better EEU support I've added some accented glyphs (latin2)
 
 
@@ -38,6 +38,8 @@ Download into `wine/`:
 * [OpenJDK](https://www.openlogic.com/openjdk-downloads)
     ... and unzip it, and you may remove the .zip
 * [JavaEditor](http://javaeditor.org/doku.php?id=en:download) installer
+
+NOTE: If you choose a 64-bit JavaEditor, then also choose a 64-bit JDK to match it.
 
 Enable X11 programs to connect from anywhere who can access your `/tmp/.X11-unix/`:
 ```
@@ -78,7 +80,6 @@ Now you have a Wine home folder with the JDK and JavaEditor installed in it.
 Create a tarball from this Wine home (note the `sudo`, most files in it are owned by root):
 ```
 sudo tar cjf slash_wine.tar.bz2 wine/
-sudo docker build -t javaeditor:19.20.1 .
 ```
 
 And now build the JavaEditor container and tag it as latest:
